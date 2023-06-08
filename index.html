@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="node_modules/wowjs/css/libs/animate.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="primary">
+        
+        <div class="background">
+            <img src="typetestback.jpeg" alt="">
+        </div>
+
+        <div id="temel" class=" temel">
+
+ 
+            <div data-wow-duration="1s" class="kelimeler-container wow fadeInRightBig">
+                <div class="kelimeler" >
+                    <div class="wordsscroll" id="kelimeler">
+                    </div>
+                    <div class="strelka">
+                        <div class="isaret"></div>
+                    </div>
+                </div>
+            </div>
+    
+            <div data-wow-duration="1s" class="girdi wow fadeInUp">
+                <div><input id="innerword" type="text"></div>
+                <div><button id="reset"><i class="fa-solid fa-repeat"></i></button></div>
+            </div>
+    
+            <div class="values ">
+                <div data-wow-duration=".5s"  class=" wow time value nimate__animated animate__zoomIn 	">
+                    <div><p id="timer">60</p></div>
+                    <div class="cizgi"></div>
+                    <div><p class="desc">Time</p></div>
+                </div>
+                <div data-wow-duration="1s" class="wow wordmin value nimate__animated animate__zoomIn ">
+                    <div><p id="wordsmin">0</p></div>
+                    <div class="cizgi"></div>
+                    <div><p class="desc">Words/min.</p></div>
+
+                </div>
+                <div data-wow-duration="1.5s" class="wow wrongs value nimate__animated animate__zoomIn  ">
+                    <div><p id="wrongs">0</p></div>
+                    <div class="cizgi"></div>
+                    <div><p class="desc">Wrongs</p></div>
+                </div>
+
+                <div data-wow-duration="2s" class="wow errorrotate value animate__animated animate__zoomIn  ">
+                    <div><p id="errorrate">0%</p></div>
+                    <div class="cizgi"></div>
+                    <div><p class="desc">Error Rate</p></div>
+                </div>
+
+                <div data-wow-duration="2.5s" class="wow key value nimate__animated animate__zoomIn anima " >
+                    <div><p id="clickedkey">any</p></div>
+                    <div class="cizgi"></div>
+                    <div><p class="desc">Key</p></div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="skor" id="skor">
+
+            <div class="scorcontainer">
+                <div class="toplamskor">
+                    <div class="wow animate__animated animate__fadeInDown"><span>Time:</span><p id="sktimer" class="skordeger"> 60</p></div>
+                    <div class="animate__animated animate__fadeInDown"><span>Words/min:</span><p id="skwordsmin" class="skordeger"> 120</p></div>
+                    <div class="animate__animated animate__fadeInDown"><span>Wrongs:</span><p id="skwrongs" class="skordeger">33</p> </div>
+                    <div class="animate__animated animate__fadeInDown"><span>Error Rate:</span><p id="skerrorrate" class="skordeger">46%</p> </div>
+                </div>
+                <div class="again">
+                    <div><button id="reset1">Try Again</button></div>
+                    <div><button id="">Settings</button></div>
+                </div>
+            </div>
+
+
+                 
+        </div>
+
+        <div class="settings" id="settings">
+
+            <div class="setclose"><i id="closesetting" class="fa-solid fa-xmark"></i></div>
+            <div class="settings-container">
+                <div><button id="turkce">Türkçe</button></div>
+                <div><button id="english">English</button></div>
+                <div><button id="tureng">Türkçe EN</button></div>
+                <form class="sure">
+                    <label for="times">Süre: </label>
+                    
+                    <select name="times" id="times">
+                        <option value="dkk1">1 Dakika</option>
+                        <option value="dkk2">2 Dakika</option>
+                        <option value="dkk5">5 Dakika</option>
+                        <option value="dkk10">10 Dakika</option>
+                    </select>
+
+                </form>
+                <!-- <div class="save"><button type="submit" id="save">Save</button></div> -->
+
+            </div>
+
+        </div>
+        <div class="opensettings">
+           <i id="opensettings" class="fa-solid fa-bars"></i>
+        </div>
+        
+
+    </div>
+
+
+
+
+    <script src="js.js"></script>
+    <script src="node_modules/wowjs/dist/wow.min.js"></script> 
+    <script src="node_modules/wowjs/dist/wow.js"></script> 
+    <script>
+         wow = new WOW(
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animated', // default
+                      offset:       0,          // default
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+                    )
+                    wow.init();
+    </script>
+    
+</body>
+</html> 
+
