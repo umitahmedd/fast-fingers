@@ -18,7 +18,6 @@ let wordsnorm=[
     "gunes", "kayak", "deniz", "sarap", "kare", "hayvan", "portakal", "balik", "evlilik", "gozluk", "arabasi",
     "defter", "kombi", "sampuan", "kazak", "kaplumbaga", "marul", "dudak", "kayisi", "yorgan", "kilim"
 ];
-document.getElementById(`word0`).classList.add("active-word")
 let kelimelerdiv= document.getElementById("kelimeler")
 let activeworddiv= document.getElementById("active-word-div")
 let innerword= document.getElementById("innerword")
@@ -52,6 +51,7 @@ let kaydir=0
 let wrongs=0
 let basla =  false;
 let rate=0;
+let surebelirle=60;
 
 words.sort(() => Math.random() - 0.5);
 
@@ -62,6 +62,8 @@ words.sort(() => Math.random() - 0.5);
        document.getElementById(`word${index}`).innerHTML += `<span id="word${index}-harf${i}" >${harf}</span>`
     }}
 )
+document.getElementById(`word0`).classList.add("active-word")
+
 
 selectedyime.addEventListener("change",()=>{
    if(selectedyime.value==="dkk1"){
